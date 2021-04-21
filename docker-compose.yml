@@ -1,1 +1,9 @@
-test
+version: "3.3"
+
+services:
+  lecture:
+    build: lecture/
+    image: sashumi/lecture:test
+    restart: always
+    ports:
+      - "9092:9092"
