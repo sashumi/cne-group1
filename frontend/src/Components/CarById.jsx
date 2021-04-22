@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
 import axios from 'axios';
 
+
 const CarID = () => {
   const {id} = useParams();
   const [isLoaded, setIsLoaded] = useState(false)
@@ -16,6 +17,14 @@ const CarID = () => {
       setIsLoaded(true); 
   }
 
+  function deleteCar(id) {
+    axios.delete("http://localhost:9092/car/delete/"+id)
+    .then(response => {
+      console.log(response.data);
+  });
+  }
+  
+
   return( 
       <>
   <h1> Cars {id} </h1> 
@@ -24,10 +33,12 @@ const CarID = () => {
           <tr>
               <th>Name</th>
               <th>ID</th>
+              <th></th>
           </tr>
           <tr>
               <td>{data.name}</td>
               <td>{data.id}</td>
+              <td><button onclick={deleteCar(id)}>Delete car</button></td>
           </tr>
   </table>
   </>
