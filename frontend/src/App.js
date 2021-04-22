@@ -31,13 +31,13 @@ function App() {
             <Route exact path="/cars/all">
                 <Cars/>
             </Route>
-            <Route exact path="/cars/:id">
+            <Route exact path="/cars/readbyid/:id">
                 <CarID/>
             </Route>
-            <Route exact path="/car/:name">
+            <Route exact path="/car/readbyname/:name">
                 <CarName/>
             </Route>
-            <Route exact path="/garage/:id">
+            <Route exact path="/garage/readbyid/:id">
                 <GarageID/>
             </Route>
         </Switch>
