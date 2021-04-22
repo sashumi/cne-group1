@@ -10,7 +10,6 @@ const NewCar = () => {
   const [modelState, setModel] = useState('');
   const [doorsState, setDoors] = useState('');
   const [garageIdState, setGarage] = useState('');
-  const [buttonState, setButton] = useState(false);
 
 
   const isEnabled = nameState.length > 0 && colourState.length > 0 &&
