@@ -9,6 +9,8 @@ import CarName from './Components/CarByName';
 import GarageID from './Components/GarageById';
 import Home from './Components/Homepage';
 import Nav from './Components/Navigation';
+import NewGarage from './Components/NewGarage';
+import NewCar from './Components/NewCar';
 
 function App() {
   return (
@@ -20,9 +22,11 @@ function App() {
             </Route>
             <Route exact path="/cars/create">
                 <CarAdd/>
+                <NewCar/>
             </Route>
             <Route exact path="/garage/create">
                 <GarageAdd/>
+                <NewGarage/>
             </Route>
             <Route exact path="/garage/all">
                 <Garages/>
