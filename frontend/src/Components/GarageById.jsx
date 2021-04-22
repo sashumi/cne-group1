@@ -1,7 +1,6 @@
 import {useParams} from 'react-router-dom';
 import axios from 'axios';
 import {useState} from 'react';
-import {Link} from 'react-router-dom';
 
 const GarageID = () => {
     const {id} = useParams();
@@ -22,14 +21,18 @@ const GarageID = () => {
     <h1> Garage {id} </h1> 
 
     <table style={{width:"60%"}}>
-            <tr>
+        <thead>
+             <tr>
                 <th>Name</th>
                 <th>ID</th>
-            </tr>
+            </tr>           
+        </thead>
+        <tbody>
             <tr>
                 <td>{data.name}</td>
                 <td>{data.id}</td>
             </tr>
+        </tbody>
     </table>
     </>
     );

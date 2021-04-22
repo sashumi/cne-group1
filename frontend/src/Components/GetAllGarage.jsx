@@ -19,18 +19,20 @@ const GetAllGarage = () => {
     return(
         <>
         <table style={{width:"60%"}}>
+            <thead>
             <tr>
                 <th>Name</th>
                 <th>ID</th>
-            </tr>
-
-            {data.map((item) => (
-                <tr>
-                    <td><Link to={"/garage/readbyid/"+item.id}>{item.name}</Link></td>
-                    <td>{item.id}</td>
-                </tr>
-
-            ))}
+            </tr>                
+            </thead>
+            <tbody>
+                {data.map((item) => (
+                    <tr>
+                        <td><Link to={"/garage/readbyid/"+item.id}>{item.name}</Link></td>
+                        <td>{item.id}</td>
+                    </tr>
+                ))};
+             </tbody>
         </table>
         </>
     );
