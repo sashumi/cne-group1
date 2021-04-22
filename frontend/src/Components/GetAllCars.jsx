@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 const GetAllCars = () => {
     const [data, setData] = useState([])
@@ -29,7 +30,7 @@ const GetAllCars = () => {
 
             {data.map((item) => (
                 <tr>
-                    <td>{item.name}</td>
+                    <td><Link to={"/garage/readbyid/"+item.id}>{item.name}</Link></td>
                     <td>{item.make}</td>
                     <td>{item.model}</td>
                     <td>{item.colour}</td>

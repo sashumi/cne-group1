@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 const GetAllGarage = () => {
     const [data, setData] = useState([])
@@ -25,7 +26,7 @@ const GetAllGarage = () => {
 
             {data.map((item) => (
                 <tr>
-                    <td>{item.name}</td>
+                    <td><Link to={"/garage/readbyid/"+item.id}>{item.name}</Link></td>
                     <td>{item.id}</td>
                 </tr>
 
