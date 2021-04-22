@@ -10,14 +10,6 @@ const NewCar = () => {
   const [modelState, setModel] = useState('');
   const [doorsState, setDoors] = useState('');
   const [garageIdState, setGarage] = useState('');
-  const [buttonState, setButton] = useState(false);
-
-
-  const isEnabled = nameState.length > 0 && colourState.length > 0 &&
-                      makeState.length > 0 && modelState.length > 0 &&
-                      doorsState > 2 && doorsState < 6 && garageIdState > 0
-      
-
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -51,29 +43,52 @@ const NewCar = () => {
         <br/>
         <label>
           Colour:
-          <input type="text" value={colourState} name="colour" onChange={(e) => setColour(e.target.value)} />
+          <select onClick={e => setColour(e.target.value)}>
+                    <option defaultValue={colourState}>{colourState}</option>
+                    <option value="blue">Blue</option>
+                    <option value="white">White</option>
+                    <option value="red">Red</option>
+                    <option value="silver">Silver</option>
+          </select>
         </label>
         <br/>
         <label>
           Make:
-          <input type="text" value={makeState} name="make" onChange={(e) => setMake(e.target.value)} />
+          <select onClick={e => setMake(e.target.value)}>
+                    <option defaultValue={makeState}>{makeState}</option>
+                    <option value="Aston Martin">Aston Martin</option>
+                    <option value="Alfa Romeo">Alfa Romeo</option>
+                    <option value="Audi">Audi</option>
+                    <option value="BMW">BMW</option>
+          </select>
         </label>
         <br/>
         <label>
           Model:
-          <input type="text" value={modelState} name="model" onChange={(e) => setModel(e.target.value)} />
+           <select onClick={e => setModel(e.target.value)}>
+                    <option defaultValue={modelState}>{modelState}</option>
+                    <option value="Austin Maestro">Austin Maestro</option>
+                    <option value="Alfa Romeo GT">Alfa Romeo GT</option>
+                    <option value="Audi R8">Audi R8</option>
+                    <option value="BMW M1">BMW M1</option>
+          </select>
         </label>
         <br/>
         <label>
           Doors:
-          <input type="text" value={doorsState} name="doors" onChange={(e) => setDoors(e.target.value)} />
+          <select onClick={e => setDoors(e.target.value)}>
+                    <option defaultValue={doorsState}>{doorsState}</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+          </select>
         </label>
         <br/>
         <label>
           Garage ID:
           <input type="text" value={garageIdState} name="garageId" onChange={(e) => setGarage(e.target.value)} />
         </label>
-        <button type="submit" disabled={!isEnabled}>Add</button>
+        <button type="submit">Add</button>
       </form>
     </div>
     )
