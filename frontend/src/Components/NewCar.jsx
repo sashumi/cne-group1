@@ -11,6 +11,13 @@ const NewCar = () => {
   const [doorsState, setDoors] = useState('');
   const [garageIdState, setGarage] = useState('');
 
+
+  const isEnabled = nameState.length > 0 && colourState.length > 0 &&
+                      makeState.length > 0 && modelState.length > 0 &&
+                      doorsState > 2 && doorsState < 6 && garageIdState > 0
+      
+
+
   const handleSubmit = event => {
     event.preventDefault();
 

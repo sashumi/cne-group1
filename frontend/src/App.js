@@ -11,6 +11,8 @@ import Home from './Components/Homepage';
 import Nav from './Components/Navigation';
 import NewGarage from './Components/NewGarage';
 import NewCar from './Components/NewCar';
+import GetAllGarage from './Components/GetAllGarage';
+import GetAllCars from './Components/GetAllCars';
 
 function App() {
   return (
@@ -30,17 +32,19 @@ function App() {
             </Route>
             <Route exact path="/garage/all">
                 <Garages/>
+                <GetAllGarage/>
             </Route>
             <Route exact path="/cars/all">
                 <Cars/>
+                <GetAllCars/>
             </Route>
-            <Route exact path="/cars/:id">
+            <Route exact path="/cars/readbyid/:id">
                 <CarID/>
             </Route>
-            <Route exact path="/car/:name">
+            <Route exact path="/cars/readbyname/:name">
                 <CarName/>
             </Route>
-            <Route exact path="/garage/:id">
+            <Route exact path="/garage/readbyid/:id">
                 <GarageID/>
             </Route>
         </Switch>
