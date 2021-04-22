@@ -4,26 +4,22 @@ import axios from 'axios';
 
 const NewGarage = () => {
  
-  const [NameState, setName] = useState();
-
-  const handleChange = event => {
-    setName({ name: event.target.value });
-  }
+  const [NameState, setName] = useState('');
 
   const handleSubmit = event => {
     event.preventDefault();
-  }
+  
 
   let garage = {
       name: NameState
     }
 
-  axios.post(`http://localhost:9092/car/create`,  garage)
+  axios.post(`http://localhost:9092/garage/create`,  garage)
     .then(res => {
       console.log(res);
       console.log(res.data);
     })
- 
+ }
 
   
   return (
