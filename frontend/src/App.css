@@ -1,0 +1,12 @@
+.navigation {
+  display: inline;
+  list-style-type: none;
+  margin: 5px;
+  padding: 5px;
+  font-size: 25px;
+}
+
+.navlink {
+  text-decoration: none;
+}
+
