@@ -18,6 +18,7 @@ const GetAllGarage = () => {
     
     return(
         <>
+        <h1>Garages</h1>
         <table style={{width:"60%"}}>
             <tr>
                 <th>Name</th>

@@ -2,8 +2,6 @@ import React from 'react';
 import { Switch, Route, BrowserRouter as Router} from 'react-router-dom';
 import GarageAdd from './Components/AddAGarage';
 import CarAdd from './Components/AddACar';
-import Cars from './Components/AllCars';
-import Garages from './Components/AllGarages';
 import CarID from './Components/CarById';
 import CarName from './Components/CarByName';
 import GarageID from './Components/GarageById';
@@ -31,11 +29,9 @@ function App() {
                 <NewGarage/>
             </Route>
             <Route exact path="/garage/all">
-                <Garages/>
                 <GetAllGarage/>
             </Route>
             <Route exact path="/cars/all">
-                <Cars/>
                 <GetAllCars/>
             </Route>
             <Route exact path="/cars/readbyid/:id">
