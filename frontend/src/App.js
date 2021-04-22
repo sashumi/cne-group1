@@ -1,6 +1,5 @@
 import React from 'react';
 import { Switch, Route, BrowserRouter as Router} from 'react-router-dom';
-import './App.css';
 import GarageAdd from './Components/AddAGarage';
 import CarAdd from './Components/AddACar';
 import Cars from './Components/AllCars';
