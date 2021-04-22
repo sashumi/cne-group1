@@ -95,7 +95,7 @@ const NewCar = () => {
           Garage ID:
           <input type="text" value={garageIdState} name="garageId" onChange={(e) => setGarage(e.target.value)} />
         </label>
-        <button type="submit">Add</button>
+        <button type="submit" disabled={!isEnabled}>Add</button>
       </form>
     </div>
     )
