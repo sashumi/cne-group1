@@ -31,7 +31,7 @@ const GetAllCars = () => {
 
             {data.map((item) => (
                 <tr>
-                    <td><Link to={"/car/readbyid/"+item.id}>{item.name}</Link></td>
+                    <td><Link to={"/cars/readbyid/"+item.id}>{item.name}</Link></td>
                     <td>{item.make}</td>
                     <td>{item.model}</td>
                     <td>{item.colour}</td>
