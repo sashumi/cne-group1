@@ -5,14 +5,6 @@ const Garages = () => {
     return(          
         <>  
             <h1>Garages</h1>
-            <strong>Select a garage:</strong>
-            <ul>
-                <li>
-                    <Link to="/garage/readbyid/1">Garage 1</Link>
-                    Name:
-                </li>
-            </ul>
-            <p>{id}</p>
         </> 
     );
 }
