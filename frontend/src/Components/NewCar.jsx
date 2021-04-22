@@ -10,6 +10,14 @@ const NewCar = () => {
   const [modelState, setModel] = useState('');
   const [doorsState, setDoors] = useState('');
   const [garageIdState, setGarage] = useState('');
+  const [buttonState, setButton] = useState(false);
+
+
+  const isEnabled = nameState.length > 0 && colourState.length > 0 &&
+                      makeState.length > 0 && modelState.length > 0 &&
+                      doorsState > 2 && doorsState < 6 && garageIdState > 0
+      
+
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -65,7 +73,7 @@ const NewCar = () => {
           Garage ID:
           <input type="text" value={garageIdState} name="garageId" onChange={(e) => setGarage(e.target.value)} />
         </label>
-        <button type="submit">Add</button>
+        <button type="submit" disabled={!isEnabled}>Add</button>
       </form>
     </div>
     )
