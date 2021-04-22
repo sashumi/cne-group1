@@ -1,4 +1,10 @@
+import {useParams} from 'react-router-dom';
+
 const GarageID = () => {
-    return( <h1> See garage by ID </h1> );
+    const {id} = useParams();
+    return( <h1> Garage {id} </h1> );
+
+    
+
 }
 export default GarageID;
