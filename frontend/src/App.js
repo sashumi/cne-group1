@@ -34,7 +34,7 @@ function App() {
             <Route exact path="/cars/readbyid/:id">
                 <CarID/>
             </Route>
-            <Route exact path="/car/readbyname/:name">
+            <Route exact path="/cars/readbyname/:name">
                 <CarName/>
             </Route>
             <Route exact path="/garage/readbyid/:id">
