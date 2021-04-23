@@ -20,15 +20,17 @@ const GetAllCars = () => {
         <>
         <h1>Cars</h1>
         <table style={{width:"60%"}}>
-            <tr>
+            <thead>
+               <tr>
                 <th>Name</th>
                 <th>Make</th>
                 <th>Model</th>
                 <th>Color</th>
                 <th># of doors</th>
                 <th>Car ID</th>
-            </tr>
-
+            </tr>             
+            </thead>
+            <tbody>
             {data.map((item) => (
                 <tr>
                     <td><Link to={"/cars/readbyid/"+item.id}>{item.name}</Link></td>
@@ -38,8 +40,11 @@ const GetAllCars = () => {
                     <td>{item.doors}</td>
                     <td>{item.id}</td>
                 </tr>
-
             ))}
+            </tbody>
+
+
+
         </table>
         </>
     );
