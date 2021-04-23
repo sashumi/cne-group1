@@ -31,7 +31,7 @@ const GetAllGarage = () => {
                         <td><Link to={"/garage/readbyid/"+item.id}>{item.name}</Link></td>
                         <td>{item.id}</td>
                     </tr>
-                ))};
+                ))}
              </tbody>
         </table>
         </>
